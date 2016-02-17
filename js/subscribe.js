@@ -17,7 +17,7 @@ subscribe = {
     var required_css = [
       'http://fonts.googleapis.com/icon?family=Material+Icons',
       '/css/materialize.min.css',
-      '/css/subscribe.min.css'
+      'css/subscribe.min.css'
     ];
 
 
