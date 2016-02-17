@@ -1,1 +1,33 @@
-.subscribe_pkg{display:block !important}.subscribe_pkg #email{margin-bottom:0}.subscribe_pkg .email_label{left:0px}@media only screen and (min-width: 601px){.subscribe_pkg .first.subscribe_button{margin-top:20px}}.subscribe_pkg .blocked{pointer-events:none}.subscribe_pkg .date_label{pointer-events:none}.subscribe_pkg .secondary_form_container{display:none}.subscribe_pkg [type="checkbox"]+label{height:auto}.subscribe_pkg .modal .modal-content{overflow-y:scroll;-webkit-overflow-scrolling:touch}.subscribe_pkg .modal .valign-wrapper{height:100%}.subscribe_pkg .modal .preloader-wrapper{margin:auto}.subscribe_pkg .modal h6{text-transform:uppercase;color:#666}.subscribe_pkg .modal .legal_text{font-size:.8em;color:#666;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}
+.subscribe_pkg {
+  display: block !important; }
+  .subscribe_pkg #email {
+    margin-bottom: 0; }
+  .subscribe_pkg .email_label {
+    left: 0px; }
+  @media only screen and (min-width: 601px) {
+    .subscribe_pkg .first.subscribe_button {
+      margin-top: 20px; } }
+  .subscribe_pkg .blocked {
+    pointer-events: none; }
+  .subscribe_pkg .date_label {
+    pointer-events: none; }
+  .subscribe_pkg .secondary_form_container {
+    display: none; }
+  .subscribe_pkg [type="checkbox"] + label {
+    height: auto; }
+  .subscribe_pkg .modal .modal-content {
+    overflow-y: scroll;
+    /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch; }
+  .subscribe_pkg .modal .valign-wrapper {
+    height: 100%; }
+  .subscribe_pkg .modal .preloader-wrapper {
+    margin: auto; }
+  .subscribe_pkg .modal h6 {
+    text-transform: uppercase;
+    color: #666; }
+  .subscribe_pkg .modal .legal_text {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
