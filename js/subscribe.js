@@ -4,7 +4,7 @@ subscribe = {
   app: function() {
 
     // Required Js
-    var required_js = '/js/materialize.min.js';
+    var required_js = 'js/materialize.min.js';
 
     // Append Required JS
     if (!$('head script[src="' + required_js + '"]').length > 0) {
@@ -16,7 +16,7 @@ subscribe = {
     // Required CSS
     var required_css = [
       'http://fonts.googleapis.com/icon?family=Material+Icons',
-      '/css/materialize.min.css',
+      'css/materialize.min.css',
       'css/subscribe.min.css'
     ];
 
