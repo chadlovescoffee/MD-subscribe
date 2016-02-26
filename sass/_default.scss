@@ -1,0 +1,177 @@
+
+// Media Query Ranges
+$small: 601px;
+$medium: 993px;
+$large: 1201px;
+
+
+// Media Queries
+@mixin screen($screen_width) {
+  @media (min-width: $screen_width ) and (min-height: 0px) {
+    @content;
+  }
+}
+
+// Column Wrapper
+.column_wrapper {
+  position: relative;
+  overflow: visible;
+
+  &:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+// Column
+@mixin column ($width) {
+  float: left;
+  width: $width;
+  position: relative;
+}
+
+
+
+// Vertical Gradient
+@mixin vertical-gradient($from, $to, $stop: 100%) {
+  background: -moz-linear-gradient(270deg, $from 0%, $to $stop);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $from), color-stop($stop, $to));
+  background: -webkit-linear-gradient(270deg, $from 0%, $to $stop);
+  background: -o-linear-gradient(270deg, $from 0%, $to $stop);
+  background: -ms-linear-gradient(270deg, $from 0%, $to $stop);
+  background: linear-gradient(180deg, $from 0%, $to $stop);
+}
+
+
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Box Shadow
+@mixin shadow($top, $left, $blur, $color) {
+  -webkit-filter: drop-shadow($top $left $blur $color);
+  filter: drop-shadow($top $left $blur $color);
+}
+
+
+// Horizontal Align
+@mixin horizontal-align {
+  display: block;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+
+@mixin ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  // dont't need?
+  > .ratio_fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Scale Transform
+@mixin scale($unit) {
+  -webkit-transform: scale($unit);
+  -ms-transform: scale($unit);
+  transform: scale($unit);
+}
+
+
+// Rotate Transform 40deg
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+
+
+//transition
+@mixin transition($duration) {
+  -webkit-transition: $duration;
+  -moz-transition: $duration;
+  -ms-transition: $duration;
+  -o-transition: $duration;
+  transition: $duration;
+}
+
+
+
+
+@font-face {
+  font-family: socials;
+  src: url('../font/socials.woff') format('woff');
+}
+
+$socials: 'socials', sans-serif;
+
+
+
+// socials
+.socials {
+
+  div {
+    font-size: 1em;
+    display: inline-block;
+    font-family: $socials;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .youtube:before { content:'r';}
+  .twitter:before { content:'a';}
+  .facebook:before { content:'b';}
+  .instagram:before { content:'x';}
+  .apple:before { content:'O';}
+  .play:before { content:'L';}
+  .spotify:before { content:'o';}
+  .tumblr:before { content:'z';}
+}
+
+
+body {
+  background-color: #000;
+  min-width: 300px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+
+
+
+
+// Main
+main {
+  flex: 1 0 auto;
+}
+
+
+.socials {
+  font-size: 1.1em;
+
+  a {
+    padding-left: 2px;
+    padding-right: 2px;
+    display: inline-block;
+  }
+}
